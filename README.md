@@ -17,11 +17,9 @@ This project is a Streamlit web application for exploring and visualizing salary
 - **Backend:** Pandas, Plotly
 - **Data Source:** CSV file
 
-### Screenshot
+### Layout
 
-<!-- Add a screenshot of the dashboard below -->
-
-![Dashboard Screenshot](path/to/screenshot.png)
+![Recording](ScreenDashboardRecording-1.gif)
 
 ---
 

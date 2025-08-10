@@ -5,7 +5,7 @@ import pycountry as pc
 
 st.set_page_config(page_title="Data Salary Dashboard", page_icon="📊", layout="wide")
 
-df = pd.read_csv("2025-08-10T00-25_export.csv")
+df = pd.read_csv("data_salaries_database.csv")
 
 df_clean = df.dropna()
 
@@ -199,5 +199,11 @@ with col_graf4:
     else:
         st.warning("No data available for the countries chart.")
 # --- Detailed Data Table ---
-st.subheader("Detailed Data")
-st.dataframe(df_filtrado)
+with st.expander(f"📋 Detailed Data ({len(df_filtrado):,} records)", expanded=False):
+    st.dataframe(df_filtrado)
+
+# --- Footer ---
+st.markdown(
+    "<p style='text-align: center;'>Created with ❤️ by IgorJFS</p>",
+    unsafe_allow_html=True,
+)
