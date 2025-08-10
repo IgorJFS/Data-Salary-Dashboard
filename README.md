@@ -19,8 +19,4 @@ This project is a Streamlit web application for exploring and visualizing salary
 
 ### Layout
 
-![Recording](ScreenDashboardRecording-1.gif)
-
----
-
-Feel free to update this README with more details or instructions as needed.
+![ScreenDashboardRecording](https://github.com/user-attachments/assets/75cebbad-2109-4a3c-837d-f494e60ccb99)
