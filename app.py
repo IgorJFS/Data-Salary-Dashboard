@@ -149,7 +149,7 @@ with col_graf2:
             df_clean,
             x="salary_in_usd",
             nbins=30,
-            title="Distribuição de salários anuais",
+            title="Annual Salary Distribution",
             labels={"salary_in_usd": "Salary Average (USD)", "count": ""},
         )
         grafico_hist.update_layout(title_x=0.1)
