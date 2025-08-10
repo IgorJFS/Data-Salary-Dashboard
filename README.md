@@ -14,9 +14,11 @@ This project is a Streamlit web application for exploring and visualizing salary
 ### Tech Stack
 
 - **Frontend:** Streamlit
-- **Backend:** Pandas, Plotly
+- **Backend:** Python, Pandas, Plotly
 - **Data Source:** CSV file
 
 ### Layout
 
 ![ScreenDashboardRecording](https://github.com/user-attachments/assets/75cebbad-2109-4a3c-837d-f494e60ccb99)
+
+#### This project was based on Imersao Dados com Python from Alura, and modified by IgorJFS.
