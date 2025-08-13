@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import pycountry as pc
+import base64
 
 st.set_page_config(page_title="Data Salary Dashboard", page_icon="📊", layout="wide")
 
@@ -10,6 +11,14 @@ df = pd.read_csv("data_salaries_database.csv")
 df_clean = df.dropna()
 
 df_clean = df_clean.assign(work_year=df_clean["work_year"].astype("Int64"))
+
+
+def get_base64_image(image_path):
+    with open(image_path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+
+image_base64 = get_base64_image("public/support_me_on_kofi_blue.png")
 
 senioridade = {
     "SE": "Senior",
@@ -204,6 +213,13 @@ with st.expander(f"📋 Detailed Data ({len(df_filtrado):,} records)", expanded=
 
 # --- Footer ---
 st.markdown(
-    "<p style='text-align: center;'>Created with ❤️ by IgorJFS</p>",
+    f"""
+    <p style='text-align: center;'>Created with ❤️ by IgorJFS</p>
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <a href="https://ko-fi.com/zackiewackie" target="_blank">
+            <img src="data:image/png;base64,{image_base64}" alt="Support me on Ko-fi" style="height: 40px;">
+        </a>
+    </div>
+    """,
     unsafe_allow_html=True,
 )
